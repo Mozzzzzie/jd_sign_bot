@@ -1,11 +1,13 @@
-name: Github JD-sign bot
+name: Yuanyuan
 
 on:
-    push:
-        branches:
-            - master
-    schedule:
-        - cron: '14 23 * * *'
+  workflow_dispatch:
+  schedule:
+    - cron: '13 23 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: Yuanyuan
 jobs:
     build:
         runs-on: ubuntu-latest
