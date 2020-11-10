@@ -1,11 +1,13 @@
-name: Github JD-sign bot
+name: ZPENG
 
 on:
-    push:
-        branches:
-            - master
-    schedule:
-        - cron: '12 23 * * *'
+  workflow_dispatch:
+  schedule:
+    - cron: '12 23 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: Zpeng
 jobs:
     build:
         runs-on: ubuntu-latest
