@@ -1,13 +1,13 @@
-name: Github JD-sign bot
+name: Chunyi
 
 on:
-    push:
-        branches:
-            - master
-    schedule:
-        - cron: '16 23 * * *'
-    watch:
-      types: [started]
+  workflow_dispatch:
+  schedule:
+    - cron: '14 23 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: Chunyi
 jobs:
     build:
         runs-on: ubuntu-latest
