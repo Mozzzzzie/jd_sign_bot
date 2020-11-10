@@ -1,11 +1,13 @@
-name: Github JD-sign bot
+name: QIQI
 
 on:
-    push:
-        branches:
-            - master
-    schedule:
-        - cron: '01 05 * * *'
+  workflow_dispatch:
+  schedule:
+    - cron: '18 23 * * *'
+  watch:
+    types: started
+  repository_dispatch:
+    types: QIQI
 jobs:
     build:
         runs-on: ubuntu-latest
